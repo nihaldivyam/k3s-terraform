@@ -11,7 +11,7 @@ variable "profile" {
 # copy token from master node and paste here.
 variable "k3s_token" {
   type    = string
-  default = "K10edd9b4984f8d1638509daaaecc5771b82ea6d6c2375e38d5c750d4f376c93d14::server:randomstring123"
+  default = "K10c42e32790c25d84d3082f4bd7b1fbbe993f64bb66fa0a5f26fc955e09e2cd415::server:randomstring123"
 }
 
 variable "asg-enable-metrics" {
@@ -26,12 +26,12 @@ variable "cluster_name" {
 
 variable "ami_id" {
   type    = string
-  default = "ami-026dea5602e368e96"
+  default = "ami-026669ec456129a70"
 }
 
 variable "worker_instance_type" {
   type    = string
-  default = "t3a.micro"
+  default = "t3a.large"
 }
 
 variable "public_subnet_cidr_blocks" {
@@ -45,4 +45,8 @@ variable "private_subnet_cidr_blocks" {
   default = ["subnet-022cd6511d5315cae",
   "subnet-01ea7040d2963e9a7",
   "subnet-08226464de1d222fb",]
+}
+
+variable "deployer-public-key" {
+  type    = string
 }
